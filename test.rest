@@ -1,0 +1,73 @@
+###
+POST http://localhost:5555/books 
+content-type: application/json
+
+{
+    "title" : "SachA",
+    "author" : "Huong",
+    "publishYear" : 3000
+}
+
+
+
+###
+GET http://localhost:5555/books 
+
+
+###
+GET http://localhost:5555/books/6593c7180683401895178b5a
+
+
+### 
+PUT http://localhost:5555/books/6593c7180683401895178b5a
+content-type: application/json
+
+{
+    "title" : "Sach1",
+    "author" : "TrongNhan",
+    "publishYear" : 4000
+}
+
+
+###
+DELETE http://localhost:5555/books/6593c7180683401895178b5a
+
+
+
+###
+POST http://localhost:5555/auth/register
+content-type: application/json
+
+{
+    "username" : "nhanle",
+    "password" : "123",
+    "email" : "ltn@gmail.com",
+    "isAdmin" : true
+}
+
+
+
+
+###
+POST http://localhost:5555/auth/login
+content-type: application/json
+
+{
+    "username" : "nhanle",
+    "password" : "123"
+}
+
+
+###
+POST http://localhost:5555/auth/refresh
+content-type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNjOGQwNzUzNTM3ZDBjZTViZWVhOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNDE5MTgyMH0.j6L_20YGCUHYRFYOQgAE-QK915h6pmkDhEq5W8UP6O4"
+}
+
+
+###
+GET http://localhost:5555/auth/users
+
+
